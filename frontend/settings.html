@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings | Student Assignment Tracker</title>
+
+<link rel="stylesheet" href="../css/settings.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="settings-container">
+
+<header>
+
+<h1>Settings ⚙️</h1>
+
+<p>
+
+Customize your account and application preferences.
+
+</p>
+
+</header>
+
+<!-- ================= ACCOUNT ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-user"></i>
+
+Account Settings
+
+</h2>
+
+<div class="setting">
+
+<span>Edit Profile</span>
+
+<button>Edit</button>
+
+</div>
+
+<div class="setting">
+
+<span>Change Password</span>
+
+<button>Change</button>
+
+</div>
+
+<div class="setting">
+
+<span>Change Email</span>
+
+<button>Update</button>
+
+</div>
+
+</section>
+
+<!-- ================= NOTIFICATIONS ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-bell"></i>
+
+Notification Preferences
+
+</h2>
+
+<div class="toggle">
+
+<label>Email Notifications</label>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="toggle">
+
+<label>Assignment Reminders</label>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="toggle">
+
+<label>Group Updates</label>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="toggle">
+
+<label>Teacher Announcements</label>
+
+<input type="checkbox">
+
+</div>
+
+</section>
+
+<!-- ================= APPEARANCE ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-palette"></i>
+
+Appearance
+
+</h2>
+
+<div class="setting">
+
+<span>Theme</span>
+
+<select>
+
+<option>Light</option>
+
+<option>Dark</option>
+
+</select>
+
+</div>
+
+<div class="setting">
+
+<span>Font Size</span>
+
+<select>
+
+<option>Small</option>
+
+<option selected>Medium</option>
+
+<option>Large</option>
+
+</select>
+
+</div>
+
+</section>
+<!-- ================= LANGUAGE ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-language"></i>
+
+Language
+
+</h2>
+
+<div class="setting">
+
+<span>Application Language</span>
+
+<select>
+
+<option selected>English</option>
+
+<option>Hindi</option>
+
+<option>Marathi</option>
+
+</select>
+
+</div>
+
+</section>
+
+<!-- ================= PRIVACY ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-shield-halved"></i>
+
+Privacy & Security
+
+</h2>
+
+<div class="toggle">
+
+<label>Enable Two-Factor Authentication</label>
+
+<input type="checkbox">
+
+</div>
+
+<div class="toggle">
+
+<label>Show Online Status</label>
+
+<input type="checkbox" checked>
+
+</div>
+
+<div class="toggle">
+
+<label>Allow Data Sharing for Analytics</label>
+
+<input type="checkbox">
+
+</div>
+
+</section>
+
+<!-- ================= ACCOUNT ACTIONS ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-user-gear"></i>
+
+Account Actions
+
+</h2>
+
+<div class="setting">
+
+<span>Logout from all devices</span>
+
+<button id="logoutAll">
+
+Logout</button>
+
+</div>
+
+<div class="setting">
+
+<span>Delete Account</span>
+
+<button id="deleteAccount" class="danger">
+
+Delete</button>
+
+</div>
+
+</section>
+
+<!-- ================= SAVE SETTINGS ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Changes
+
+</h2>
+
+<button id="saveSettings" class="save-btn">
+
+Save Settings
+
+</button>
+
+</section>
+
+<footer>
+
+© 2026 Student Assignment Tracker | Settings
+
+</footer>
+
+</div>
+
+<script src="../js/settings.js"></script>
+
+</body>
+
+</html>

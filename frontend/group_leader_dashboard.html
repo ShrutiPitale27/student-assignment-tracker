@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Group Leader Dashboard | Student Assignment Tracker</title>
+
+<link rel="stylesheet" href="../css/dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>Student Assignment Tracker</h2>
+
+</div>
+
+<div class="profile">
+
+<img src="../images/profile.png" alt="Profile">
+
+<div>
+
+<h3>Shruti Pitale 👑</h3>
+
+<p>Group Leader • CSE</p>
+
+</div>
+
+</div>
+
+<ul class="menu">
+
+<li class="active">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-book"></i>
+
+Assignments
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-users"></i>
+
+Groups
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-user-group"></i>
+
+Team Management
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-list-check"></i>
+
+Assign Tasks
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-chart-line"></i>
+
+Progress Report
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-folder-open"></i>
+
+Shared Files
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-calendar-days"></i>
+
+Calendar
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-bell"></i>
+
+Notifications
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-user"></i>
+
+Profile
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</li>
+
+</ul>
+
+<button class="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<main class="content">
+
+<header>
+
+<div>
+
+<h1>Welcome back, Shruti 👑</h1>
+
+<p>
+
+Manage your team, assign tasks and track project progress.
+
+</p>
+
+</div>
+
+<div class="top-right">
+
+<input
+type="text"
+placeholder="Search...">
+
+<i class="fa-solid fa-bell notification"></i>
+
+</div>
+
+</header>
+
+<!-- ================= STATS ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<h2>4</h2>
+
+<p>Team Members</p>
+
+</div>
+
+<div class="card">
+
+<h2>18</h2>
+
+<p>Assigned Tasks</p>
+
+</div>
+
+<div class="card">
+
+<h2>13</h2>
+
+<p>Completed Tasks</p>
+
+</div>
+
+<div class="card">
+
+<h2>72%</h2>
+
+<p>Team Progress</p>
+
+</div>
+
+</section>
+
+<!-- ================= TEAM MANAGEMENT ================= -->
+
+<section class="assignment-section">
+
+<div class="section-header">
+
+<h2>Team Members</h2>
+
+<a href="#">Manage</a>
+
+</div>
+
+<table>
+
+<tr>
+
+<th>Name</th>
+
+<th>Assigned Task</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+<tr>
+
+<td>Shruti Pitale</td>
+
+<td>Frontend UI</td>
+
+<td><span class="completed">Completed</span></td>
+
+<td>Edit</td>
+
+</tr>
+
+<tr>
+
+<td>Shreyas</td>
+
+<td>Backend & Database</td>
+
+<td><span class="pending">Pending</span></td>
+
+<td>Edit</td>
+
+</tr>
+
+<tr>
+
+<td>Rohan</td>
+
+<td>Testing</td>
+
+<td><span class="completed">Completed</span></td>
+
+<td>Edit</td>
+
+</tr>
+
+<tr>
+
+<td>Vedant</td>
+
+<td>Documentation</td>
+
+<td><span class="pending">Pending</span></td>
+
+<td>Edit</td>
+
+</tr>
+
+</table>
+
+</section>
+<!-- ================= LOWER SECTION ================= -->
+
+<div class="bottom-grid">
+
+<div class="groups">
+
+<h2>Leader Quick Actions</h2>
+
+<div class="group-box">
+
+<h3>Project Phoenix</h3>
+
+<p>Manage your project efficiently.</p>
+
+<button>Create Task</button>
+
+<br><br>
+
+<button>Add Member</button>
+
+<br><br>
+
+<button>Upload Shared File</button>
+
+<br><br>
+
+<button>Generate Report</button>
+
+</div>
+
+</div>
+
+<div class="deadlines">
+
+<h2>Upcoming Activities</h2>
+
+<ul>
+
+<li>📌 Review DBMS Module - Tomorrow</li>
+
+<li>📌 Assign Cloud Tasks - 12 Aug</li>
+
+<li>📌 Weekly Team Meeting - 13 Aug</li>
+
+<li>📌 Final Submission - 18 Aug</li>
+
+<li>📌 Documentation Review - 20 Aug</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- ================= SHARED FILES ================= -->
+
+<section class="assignment-section">
+
+<div class="section-header">
+
+<h2>Shared Files</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<table>
+
+<tr>
+
+<th>File Name</th>
+
+<th>Uploaded By</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>Frontend_UI.zip</td>
+
+<td>Shruti</td>
+
+<td>08 Aug 2026</td>
+
+<td><span class="completed">Uploaded</span></td>
+
+</tr>
+
+<tr>
+
+<td>Backend_Source.zip</td>
+
+<td>Shreyas</td>
+
+<td>09 Aug 2026</td>
+
+<td><span class="pending">Pending</span></td>
+
+</tr>
+
+<tr>
+
+<td>SRS_Document.pdf</td>
+
+<td>Vedant</td>
+
+<td>09 Aug 2026</td>
+
+<td><span class="completed">Uploaded</span></td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- ================= TEAM PROGRESS ================= -->
+
+<section class="announcement">
+
+<h2>Team Progress</h2>
+
+<div class="announcement-card">
+
+<h3>Overall Progress : 72%</h3>
+
+<p>
+
+✔ Frontend Completed
+
+<br><br>
+
+✔ Database Design Completed
+
+<br><br>
+
+🟡 Backend APIs In Progress
+
+<br><br>
+
+🟡 Testing Yet To Start
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= ANNOUNCEMENT ================= -->
+
+<section class="announcement">
+
+<h2>Leader Announcements</h2>
+
+<div class="announcement-card">
+
+<h3>Reminder</h3>
+
+<p>
+
+Please ensure every member uploads their assigned work before Friday.
+
+Conduct the weekly meeting and update task status after discussion.
+
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

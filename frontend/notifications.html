@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notifications | Student Assignment Tracker</title>
+
+<link rel="stylesheet" href="../css/notifications.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<div>
+
+<h1>Notifications 🔔</h1>
+
+<p>Stay updated with assignments, announcements and activities.</p>
+
+</div>
+
+<div class="header-buttons">
+
+<button id="markRead">
+
+<i class="fa-solid fa-check-double"></i>
+
+Mark All as Read
+
+</button>
+
+</div>
+
+</header>
+
+<!-- Search -->
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search notifications..."
+id="searchNotification">
+
+</div>
+
+<!-- Notification List -->
+
+<div class="notification-list">
+
+<div class="notification unread">
+
+<div class="icon assignment">
+
+<i class="fa-solid fa-book"></i>
+
+</div>
+
+<div class="content">
+
+<h3>New Assignment Added</h3>
+
+<p>
+
+Database Management Assignment has been uploaded.
+
+</p>
+
+<span>10 Minutes Ago</span>
+
+</div>
+
+<button class="delete">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+<div class="notification unread">
+
+<div class="icon announcement">
+
+<i class="fa-solid fa-bullhorn"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Faculty Announcement</h3>
+
+<p>
+
+Internal Viva will be conducted next Friday.
+
+</p>
+
+<span>1 Hour Ago</span>
+
+</div>
+
+<button class="delete">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+<div class="notification">
+
+<div class="icon submit">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Assignment Approved</h3>
+
+<p>
+
+Your Computer Networks Practical has been approved.
+
+</p>
+
+<span>Yesterday</span>
+
+</div>
+
+<button class="delete">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+<div class="notification">
+
+<div class="icon group">
+
+<i class="fa-solid fa-users"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Group Update</h3>
+
+<p>
+
+Shruti assigned you the Frontend UI task.
+
+</p>
+
+<span>Yesterday</span>
+
+</div>
+
+<button class="delete">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+<div class="notification">
+
+<div class="icon reminder">
+
+<i class="fa-solid fa-clock"></i>
+
+</div>
+
+<div class="content">
+
+<h3>Deadline Reminder</h3>
+
+<p>
+
+Cloud Computing Assignment is due tomorrow.
+
+</p>
+
+<span>Tomorrow</span>
+
+</div>
+
+<button class="delete">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<script src="../js/notifications.js"></script>
+
+</body>
+
+</html>

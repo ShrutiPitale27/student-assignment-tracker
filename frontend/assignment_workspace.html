@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Assignment Workspace | Student Assignment Tracker</title>
+
+<link rel="stylesheet" href="../css/assignment_workspace.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="workspace-container">
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="header-left">
+
+<a href="student_dashboard.html" class="back-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back to Dashboard
+
+</a>
+
+<h1>Database Management System</h1>
+
+<p>Normalization Assignment</p>
+
+</div>
+
+<div class="header-right">
+
+<span class="status pending">
+
+<i class="fa-solid fa-clock"></i>
+
+Pending
+
+</span>
+
+</div>
+
+</header>
+
+<!-- ================= ASSIGNMENT INFO ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Assignment Details
+
+</h2>
+
+<div class="info-grid">
+
+<div>
+
+<strong>Faculty</strong>
+
+<p>Prof. A. Patil</p>
+
+</div>
+
+<div>
+
+<strong>Subject</strong>
+
+<p>Database Management System</p>
+
+</div>
+
+<div>
+
+<strong>Assigned On</strong>
+
+<p>05 August 2026</p>
+
+</div>
+
+<div>
+
+<strong>Due Date</strong>
+
+<p>15 August 2026</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= DESCRIPTION ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-file-lines"></i>
+
+Assignment Description
+
+</h2>
+
+<p>
+
+Implement First Normal Form (1NF),
+
+Second Normal Form (2NF),
+
+and Third Normal Form (3NF)
+
+for the given database.
+
+Submit a PDF report along
+
+with SQL queries and screenshots.
+
+</p>
+
+</section>
+
+<!-- ================= RESOURCES ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-folder-open"></i>
+
+Resources
+
+</h2>
+
+<div class="resource-list">
+
+<div class="resource">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+assignment.pdf
+
+<button>Download</button>
+
+</div>
+
+<div class="resource">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+normalization_notes.pdf
+
+<button>Download</button>
+
+</div>
+
+<div class="resource">
+
+<i class="fa-solid fa-file-code"></i>
+
+sample_database.sql
+
+<button>Download</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SUBMISSION ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-upload"></i>
+
+Submit Assignment
+
+</h2>
+
+<input
+
+type="file"
+
+id="assignmentFile">
+
+<button id="uploadBtn">
+
+Upload Assignment
+
+</button>
+
+<p class="submission-status">
+
+Status :
+
+<span class="not-submitted">
+
+Not Submitted
+
+</span>
+
+</p>
+
+</section>
+<!-- ================= TEACHER FEEDBACK ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-comment-dots"></i>
+
+Teacher Feedback
+
+</h2>
+
+<div class="feedback-box">
+
+<p>
+
+No feedback available yet.
+
+Feedback and marks will appear here after your submission is reviewed by the faculty.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= DISCUSSION ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-comments"></i>
+
+Discussion Board
+
+</h2>
+
+<div class="discussion">
+
+<div class="message teacher">
+
+<h4>
+
+👨‍🏫 Prof. A. Patil
+
+</h4>
+
+<p>
+
+Please refer to Slide 18 before implementing normalization.
+
+</p>
+
+</div>
+
+<div class="message student">
+
+<h4>
+
+👩‍🎓 Shruti
+
+</h4>
+
+<p>
+
+Thank you, Professor. I'll update the report accordingly.
+
+</p>
+
+</div>
+
+</div>
+
+<textarea
+
+placeholder="Ask a question or post a comment...">
+
+</textarea>
+
+<button id="postComment">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Post Comment
+
+</button>
+
+</section>
+
+<!-- ================= RECENT ACTIVITY ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Recent Activity
+
+</h2>
+
+<ul class="activity-list">
+
+<li>
+
+📄 Assignment published by Prof. A. Patil
+
+<span>05 Aug 2026</span>
+
+</li>
+
+<li>
+
+📥 Resource files downloaded
+
+<span>06 Aug 2026</span>
+
+</li>
+
+<li>
+
+📝 Draft submission started
+
+<span>08 Aug 2026</span>
+
+</li>
+
+</ul>
+
+</section>
+
+<!-- ================= ASSIGNMENT PROGRESS ================= -->
+
+<section class="card">
+
+<h2>
+
+<i class="fa-solid fa-chart-simple"></i>
+
+Assignment Progress
+
+</h2>
+
+<div class="progress-container">
+
+<div class="progress-bar">
+
+<div class="progress-fill"></div>
+
+</div>
+
+<p>
+
+40% Completed
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+© 2026 Student Assignment Tracker | Assignment Workspace
+
+</footer>
+
+</div>
+
+<script src="../js/assignment_workspace.js"></script>
+
+</body>
+
+</html>

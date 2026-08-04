@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard | Student Assignment Tracker</title>
+
+<link rel="stylesheet" href="../css/dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>Student Assignment Tracker</h2>
+
+</div>
+
+<div class="profile">
+
+<img src="../images/profile.png" alt="Profile">
+
+<div>
+
+<h3>Shruti Pitale</h3>
+
+<p>CSE • Third Year</p>
+
+</div>
+
+</div>
+
+<ul class="menu">
+
+<li class="active">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-book"></i>
+
+Assignments
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-users"></i>
+
+Groups
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-calendar-days"></i>
+
+Calendar
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-bell"></i>
+
+Notifications
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-user"></i>
+
+Profile
+
+</li>
+
+<li>
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</li>
+
+</ul>
+
+<button class="logout">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</aside>
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="content">
+
+<header>
+
+<div>
+
+<h1>Welcome back, Shruti 👋</h1>
+
+<p>Stay organized. Submit on time. Succeed together.</p>
+
+</div>
+
+<div class="top-right">
+
+<input type="text" placeholder="Search assignments...">
+
+<i class="fa-solid fa-bell notification"></i>
+
+</div>
+
+</header>
+
+<!-- ================= STATS ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<h2>22</h2>
+
+<p>Total Assignments</p>
+
+</div>
+
+<div class="card">
+
+<h2>8</h2>
+
+<p>Pending</p>
+
+</div>
+
+<div class="card">
+
+<h2>12</h2>
+
+<p>Completed</p>
+
+</div>
+
+<div class="card">
+
+<h2>2</h2>
+
+<p>Overdue</p>
+
+</div>
+
+</section>
+
+<!-- ================= ASSIGNMENTS ================= -->
+
+<section class="assignment-section">
+
+<div class="section-header">
+
+<h2>My Assignments</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<table>
+
+<tr>
+
+<th>Subject</th>
+
+<th>Due Date</th>
+
+<th>Status</th>
+
+<th>Priority</th>
+
+</tr>
+
+<tr>
+
+<td>Database Management System</td>
+
+<td>10 Aug 2026</td>
+
+<td><span class="pending">Pending</span></td>
+
+<td><span class="high">High</span></td>
+
+</tr>
+
+<tr>
+
+<td>Cloud Computing Lab</td>
+
+<td>12 Aug 2026</td>
+
+<td><span class="completed">Completed</span></td>
+
+<td><span class="medium">Medium</span></td>
+
+</tr>
+
+<tr>
+
+<td>Computer Networks</td>
+
+<td>15 Aug 2026</td>
+
+<td><span class="pending">Pending</span></td>
+
+<td><span class="low">Low</span></td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- ================= LOWER SECTION ================= -->
+
+<div class="bottom-grid">
+
+<div class="groups">
+
+<h2>My Groups</h2>
+
+<div class="group-box">
+
+<h3>Project Phoenix</h3>
+
+<p>4 Members</p>
+
+<button>Open Workspace</button>
+
+</div>
+
+</div>
+
+<div class="deadlines">
+
+<h2>Upcoming Deadlines</h2>
+
+<ul>
+
+<li>IoT Assignment - Tomorrow</li>
+
+<li>DBMS Project - 12 Aug</li>
+
+<li>Cloud Lab - 15 Aug</li>
+
+<li>CN Practical - 18 Aug</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- ================= ANNOUNCEMENTS ================= -->
+
+<section class="announcement">
+
+<h2>Announcements</h2>
+
+<div class="announcement-card">
+
+<h3>Internal Hackathon</h3>
+
+<p>
+
+Registration opens this week.
+
+Create your team before Friday.
+
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

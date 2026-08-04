@@ -1,0 +1,827 @@
+/* ==========================================
+   STUDENT ASSIGNMENT TRACKER
+   DASHBOARD
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#F4F7FC;
+
+    color:#1E293B;
+
+    overflow-x:hidden;
+
+}
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:280px 1fr;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar{
+
+    background:#ffffff;
+
+    padding:28px;
+
+    border-right:1px solid #E5E7EB;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.logo i{
+
+    width:55px;
+
+    height:55px;
+
+    background:#356DFF;
+
+    color:#fff;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+}
+
+.logo h2{
+
+    font-size:22px;
+
+    color:#16335B;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    background:#F8FAFF;
+
+    border-radius:18px;
+
+    margin-bottom:35px;
+
+}
+
+.profile img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.profile h3{
+
+    font-size:18px;
+
+}
+
+.profile p{
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+
+/* Menu */
+
+.menu{
+
+    list-style:none;
+
+}
+
+.menu li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px;
+
+    margin-bottom:10px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:17px;
+
+}
+
+.menu li:hover{
+
+    background:#EEF4FF;
+
+    color:#356DFF;
+
+}
+
+.menu li.active{
+
+    background:#356DFF;
+
+    color:white;
+
+}
+
+.menu li i{
+
+    width:24px;
+
+}
+
+/* Logout */
+
+.logout{
+
+    margin-top:auto;
+
+    border:none;
+
+    background:#356DFF;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.logout:hover{
+
+    background:#255DF2;
+
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.content{
+
+    padding:35px;
+
+}
+
+/* Header */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    font-size:34px;
+
+    color:#16335B;
+
+}
+
+header p{
+
+    color:#6B7280;
+
+    margin-top:6px;
+
+}
+
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.top-right input{
+
+    width:320px;
+
+    padding:14px 18px;
+
+    border:1px solid #D9E4F5;
+
+    border-radius:15px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.notification{
+
+    width:50px;
+
+    height:50px;
+
+    background:#ffffff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    color:#356DFF;
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+   DASHBOARD CARDS
+========================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card h2{
+
+    font-size:40px;
+
+    color:#356DFF;
+
+}
+
+.card p{
+
+    margin-top:10px;
+
+    color:#6B7280;
+
+}
+/* ==========================================
+   ASSIGNMENT SECTION
+========================================== */
+
+.assignment-section{
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    margin-bottom:30px;
+
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.section-header h2{
+
+    color:#16335B;
+
+}
+
+.section-header a{
+
+    text-decoration:none;
+
+    color:#356DFF;
+
+    font-weight:600;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+table th{
+
+    text-align:left;
+
+    color:#64748B;
+
+    padding:15px;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+table td{
+
+    padding:18px 15px;
+
+    border-bottom:1px solid #EEF2F7;
+
+}
+
+table tr:hover{
+
+    background:#F8FAFF;
+
+}
+
+/* Status Badges */
+
+.pending{
+
+    background:#FFF3D8;
+
+    color:#F59E0B;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.completed{
+
+    background:#DCFCE7;
+
+    color:#16A34A;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.high{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+.medium{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+.low{
+
+    background:#ECFDF5;
+
+    color:#16A34A;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   LOWER GRID
+========================================== */
+
+.bottom-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.groups,
+.deadlines{
+
+    background:white;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.groups h2,
+.deadlines h2{
+
+    margin-bottom:20px;
+
+    color:#16335B;
+
+}
+
+.group-box{
+
+    background:#F8FAFF;
+
+    border:1px solid #E6ECF7;
+
+    border-radius:18px;
+
+    padding:20px;
+
+}
+
+.group-box h3{
+
+    color:#16335B;
+
+    margin-bottom:8px;
+
+}
+
+.group-box p{
+
+    color:#6B7280;
+
+    margin-bottom:18px;
+
+}
+
+.group-box button{
+
+    background:#356DFF;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.group-box button:hover{
+
+    background:#255DF2;
+
+}
+
+.deadlines ul{
+
+    list-style:none;
+
+}
+
+.deadlines li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid #EEF2F7;
+
+    color:#475569;
+
+}
+
+/* ==========================================
+   ANNOUNCEMENT
+========================================== */
+
+.announcement{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+}
+
+.announcement h2{
+
+    color:#16335B;
+
+    margin-bottom:20px;
+
+}
+
+.announcement-card{
+
+    background:#EEF5FF;
+
+    border-left:5px solid #356DFF;
+
+    border-radius:15px;
+
+    padding:22px;
+
+}
+
+.announcement-card h3{
+
+    color:#16335B;
+
+    margin-bottom:10px;
+
+}
+
+.announcement-card p{
+
+    color:#64748B;
+
+    line-height:28px;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.sidebar,
+.card,
+.assignment-section,
+.groups,
+.deadlines,
+.announcement{
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.bottom-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+.sidebar{
+
+display:none;
+
+}
+
+.content{
+
+padding:20px;
+
+}
+
+header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+
+}
+
+.top-right{
+
+width:100%;
+
+}
+
+.top-right input{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+table{
+
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+.content{
+
+padding:15px;
+
+}
+
+header h1{
+
+font-size:28px;
+
+}
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#C9D8FF;
+
+border-radius:20px;
+
+}
