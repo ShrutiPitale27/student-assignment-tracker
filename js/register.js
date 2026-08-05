@@ -4,10 +4,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ===========================
-    // ELEMENTS
-    // ===========================
-
     const form = document.getElementById("registerForm");
     const password = document.getElementById("password");
     const confirmPassword = document.getElementById("confirmPassword");
@@ -24,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     password.addEventListener("input", () => {
 
         const value = password.value;
-
         let strength = 0;
 
         if (value.length >= 8) strength++;
@@ -56,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             default:
                 strengthFill.style.width = "0%";
+                break;
         }
 
     });
@@ -67,19 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
     togglePassword.addEventListener("click", () => {
 
         if (password.type === "password") {
-
             password.type = "text";
-
-            togglePassword.innerHTML =
-                '<i class="fa-solid fa-eye-slash"></i>';
-
+            togglePassword.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
         } else {
-
             password.type = "password";
-
-            togglePassword.innerHTML =
-                '<i class="fa-solid fa-eye"></i>';
-
+            togglePassword.innerHTML = '<i class="fa-solid fa-eye"></i>';
         }
 
     });
@@ -87,19 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleConfirm.addEventListener("click", () => {
 
         if (confirmPassword.type === "password") {
-
             confirmPassword.type = "text";
-
-            toggleConfirm.innerHTML =
-                '<i class="fa-solid fa-eye-slash"></i>';
-
+            toggleConfirm.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
         } else {
-
             confirmPassword.type = "password";
-
-            toggleConfirm.innerHTML =
-                '<i class="fa-solid fa-eye"></i>';
-
+            toggleConfirm.innerHTML = '<i class="fa-solid fa-eye"></i>';
         }
 
     });
@@ -110,31 +90,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (e) => {
 
-        e.preventDefault();
-
+        // Password Match
         if (password.value !== confirmPassword.value) {
+
+            e.preventDefault();
 
             alert("Passwords do not match!");
 
             confirmPassword.focus();
 
             return;
-
         }
 
+        // Password Length
         if (password.value.length < 8) {
+
+            e.preventDefault();
 
             alert("Password must contain at least 8 characters.");
 
             password.focus();
 
             return;
-
         }
 
-        alert("Registration Successful!");
-
-        window.location.href = "login.html";
+        // If validation passes, the form submits automatically
+        // to backend/register.php
 
     });
 
