@@ -1,18 +1,28 @@
-document.getElementById("loginForm").addEventListener("submit", function(event){
+document.addEventListener("DOMContentLoaded", () => {
 
-    event.preventDefault();
+    const passwordInput = document.querySelector('input[name="password"]');
+    const togglePassword = document.querySelector(".toggle-password");
 
-    const role = document.getElementById("userRole").value;
+    // Show / Hide Password
+    if (togglePassword && passwordInput) {
 
-    if(role==="teacher"){
+        togglePassword.addEventListener("click", () => {
 
-        window.location.href="teacher_dashboard.html";
+            if (passwordInput.type === "password") {
 
-    }
+                passwordInput.type = "text";
+                togglePassword.classList.remove("fa-eye");
+                togglePassword.classList.add("fa-eye-slash");
 
-    else{
+            } else {
 
-        window.location.href="role_selection.html";
+                passwordInput.type = "password";
+                togglePassword.classList.remove("fa-eye-slash");
+                togglePassword.classList.add("fa-eye");
+
+            }
+
+        });
 
     }
 
