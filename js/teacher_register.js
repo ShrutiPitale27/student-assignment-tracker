@@ -4,10 +4,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ===========================
-    // ELEMENTS
-    // ===========================
-
     const form = document.getElementById("teacherRegisterForm");
     const password = document.getElementById("password");
     const confirmPassword = document.getElementById("confirmPassword");
@@ -56,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             default:
                 strengthFill.style.width = "0%";
+                break;
         }
 
     });
@@ -71,16 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (password.type === "password") {
 
                 password.type = "text";
-
-                togglePassword.innerHTML =
-                    '<i class="fa-solid fa-eye-slash"></i>';
+                togglePassword.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
 
             } else {
 
                 password.type = "password";
-
-                togglePassword.innerHTML =
-                    '<i class="fa-solid fa-eye"></i>';
+                togglePassword.innerHTML = '<i class="fa-solid fa-eye"></i>';
 
             }
 
@@ -95,16 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (confirmPassword.type === "password") {
 
                 confirmPassword.type = "text";
-
-                toggleConfirm.innerHTML =
-                    '<i class="fa-solid fa-eye-slash"></i>';
+                toggleConfirm.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
 
             } else {
 
                 confirmPassword.type = "password";
-
-                toggleConfirm.innerHTML =
-                    '<i class="fa-solid fa-eye"></i>';
+                toggleConfirm.innerHTML = '<i class="fa-solid fa-eye"></i>';
 
             }
 
@@ -118,9 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (e) => {
 
-        e.preventDefault();
-
         if (password.value !== confirmPassword.value) {
+
+            e.preventDefault();
 
             alert("Passwords do not match!");
 
@@ -132,6 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (password.value.length < 8) {
 
+            e.preventDefault();
+
             alert("Password must contain at least 8 characters.");
 
             password.focus();
@@ -140,9 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-        alert("Faculty Registration Successful!");
-
-        window.location.href = "login.html";
+        // If validation passes,
+        // allow the form to submit to teacher_register.php
 
     });
 

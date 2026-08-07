@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Teacher Registration | Student Assignment Tracker</title>
@@ -18,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
@@ -43,10 +42,8 @@
         <h3>Create Faculty Account</h3>
 
         <p>
-
             Register as a faculty member to create assignments,
             manage student submissions and monitor academic progress.
-
         </p>
 
         <img src="../images/login-illustration.png"
@@ -56,27 +53,18 @@
         <div class="feature-list">
 
             <div class="feature">
-
                 <i class="fa-solid fa-book"></i>
-
                 <span>Manage Subjects</span>
-
             </div>
 
             <div class="feature">
-
                 <i class="fa-solid fa-file-circle-plus"></i>
-
                 <span>Create Assignments</span>
-
             </div>
 
             <div class="feature">
-
                 <i class="fa-solid fa-chart-line"></i>
-
                 <span>Track Student Progress</span>
-
             </div>
 
         </div>
@@ -87,15 +75,18 @@
 
     <div class="right-panel">
 
-        <form id="teacherRegisterForm">
+        <form id="teacherRegisterForm"
+              action="../backend/teacher_register.php"
+              method="POST"
+              enctype="multipart/form-data">
 
             <h2>Create Faculty Account</h2>
 
             <p class="subtitle">
-
                 Fill in your faculty details below.
-
             </p>
+
+            <!-- Full Name -->
 
             <label>Full Name</label>
 
@@ -103,11 +94,15 @@
 
                 <i class="fa-solid fa-user"></i>
 
-                <input type="text"
-                       placeholder="Enter Full Name"
-                       required>
+                <input
+                    type="text"
+                    name="full_name"
+                    placeholder="Enter Full Name"
+                    required>
 
             </div>
+
+            <!-- Email -->
 
             <label>Faculty Email</label>
 
@@ -115,11 +110,15 @@
 
                 <i class="fa-solid fa-envelope"></i>
 
-                <input type="email"
-                       placeholder="Enter Faculty Email"
-                       required>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Faculty Email"
+                    required>
 
             </div>
+
+            <!-- Faculty ID -->
 
             <label>Faculty ID</label>
 
@@ -127,9 +126,11 @@
 
                 <i class="fa-solid fa-id-card"></i>
 
-                <input type="text"
-                       placeholder="Enter Faculty ID"
-                       required>
+                <input
+                    type="text"
+                    name="faculty_id"
+                    placeholder="Enter Faculty ID"
+                    required>
 
             </div>
 
@@ -143,24 +144,15 @@
 
                         <i class="fa-solid fa-building-columns"></i>
 
-                        <select required>
+                        <select name="department" required>
 
-                            <option selected disabled>
-
-                                Select Department
-
-                            </option>
+                            <option value="" selected disabled>Select Department</option>
 
                             <option>Computer Science Engineering</option>
-
                             <option>Information Technology</option>
-
                             <option>Artificial Intelligence & Data Science</option>
-
                             <option>Electronics & Telecommunication</option>
-
                             <option>Mechanical Engineering</option>
-
                             <option>Civil Engineering</option>
 
                         </select>
@@ -177,20 +169,13 @@
 
                         <i class="fa-solid fa-user-tie"></i>
 
-                        <select required>
+                        <select name="designation" required>
 
-                            <option selected disabled>
-
-                                Select Designation
-
-                            </option>
+                            <option value="" selected disabled>Select Designation</option>
 
                             <option>Professor</option>
-
                             <option>Associate Professor</option>
-
                             <option>Assistant Professor</option>
-
                             <option>Lab Instructor</option>
 
                         </select>
@@ -201,71 +186,38 @@
 
             </div>
 
+            <!-- Phone -->
+
             <label>Phone Number</label>
 
             <div class="input-box">
 
                 <i class="fa-solid fa-phone"></i>
 
-                <input type="tel"
-                       placeholder="Enter Phone Number"
-                       required>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Enter Phone Number"
+                    required>
 
             </div>
+
+            <!-- Subjects (UI only for now) -->
 
             <label>Subjects Teaching</label>
 
             <div class="subjects-grid">
 
-                <label class="subject-item">
-
-                    <input type="checkbox">
-
-                    Database Management System
-
-                </label>
-
-                <label class="subject-item">
-
-                    <input type="checkbox">
-
-                    Computer Networks
-
-                </label>
-
-                <label class="subject-item">
-
-                    <input type="checkbox">
-
-                    Cloud Computing
-
-                </label>
-
-                <label class="subject-item">
-
-                    <input type="checkbox">
-
-                    Internet of Things
-
-                </label>
-
-                <label class="subject-item">
-
-                    <input type="checkbox">
-
-                    Mobile Application Development
-
-                </label>
-
-                <label class="subject-item">
-
-                    <input type="checkbox">
-
-                    Software Engineering
-
-                </label>
+                <label class="subject-item"><input type="checkbox"> Database Management System</label>
+                <label class="subject-item"><input type="checkbox"> Computer Networks</label>
+                <label class="subject-item"><input type="checkbox"> Cloud Computing</label>
+                <label class="subject-item"><input type="checkbox"> Internet of Things</label>
+                <label class="subject-item"><input type="checkbox"> Mobile Application Development</label>
+                <label class="subject-item"><input type="checkbox"> Software Engineering</label>
 
             </div>
+
+            <!-- Password -->
 
             <label>Password</label>
 
@@ -273,15 +225,15 @@
 
                 <i class="fa-solid fa-lock"></i>
 
-                <input type="password"
-                       id="password"
-                       placeholder="Create Password"
-                       required>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create Password"
+                    required>
 
                 <span class="toggle-password">
-
                     <i class="fa-solid fa-eye"></i>
-
                 </span>
 
             </div>
@@ -289,15 +241,14 @@
             <div class="strength">
 
                 <div class="strength-bar">
-
                     <div id="strengthFill"></div>
-
                 </div>
 
                 <small>Password Strength</small>
 
             </div>
-                        <!-- Confirm Password -->
+
+            <!-- Confirm Password -->
 
             <label>Confirm Password</label>
 
@@ -308,13 +259,12 @@
                 <input
                     type="password"
                     id="confirmPassword"
+                    name="confirm_password"
                     placeholder="Confirm Password"
                     required>
 
                 <span class="toggle-confirm">
-
                     <i class="fa-solid fa-eye"></i>
-
                 </span>
 
             </div>
@@ -333,7 +283,7 @@
 
             </div>
 
-            <!-- Terms & Conditions -->
+            <!-- Terms -->
 
             <div class="terms">
 
@@ -356,7 +306,7 @@
 
             </div>
 
-            <!-- Register Button -->
+            <!-- Submit -->
 
             <button
                 type="submit"
@@ -368,15 +318,9 @@
 
             </button>
 
-            <!-- Divider -->
-
             <div class="divider">
-
                 <span>OR</span>
-
             </div>
-
-            <!-- Login Link -->
 
             <p class="login-text">
 
@@ -398,12 +342,11 @@
 
 <footer>
 
-    <p>© 2026 Student Assignment Tracker | All Rights Reserved</p>
+<p>© 2026 Student Assignment Tracker | All Rights Reserved</p>
 
 </footer>
 
 <script src="../js/teacher_register.js"></script>
 
 </body>
-
 </html>
